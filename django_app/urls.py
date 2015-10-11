@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^caffeApp/', include('caffeApp.urls', namespace="caffeApp")),
 ]

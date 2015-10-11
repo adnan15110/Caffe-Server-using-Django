@@ -1,0 +1,13 @@
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% if post_data %}<p><strong>{{ post_data }}</strong></p>{% endif %}
+
+
+<form action="{% url 'caffeApp:image_app' %}" method="post">
+{% csrf_token %}
+{% for d in classication_data %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ d }}" />
+    <label for="choice{{ forloop.counter }}">{{ d }}</label><br />
+{% endfor %}
+<input type="submit" value="Vote" />
+</form>

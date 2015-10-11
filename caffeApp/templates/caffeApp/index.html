@@ -1,0 +1,9 @@
+{% if classication_data %}
+    <ul>
+    {% for d in classication_data %}
+        <li><a href="{% url 'caffeApp:index'%}">{{ d }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data are available.</p>
+{% endif %}
