@@ -12,3 +12,7 @@ class ClassifierResult(models.Model):
 
     def __str__(self):
         return self.predicted_class
+
+
+class Image(models.Model):
+    imagefile = models.FileField(upload_to='images')
